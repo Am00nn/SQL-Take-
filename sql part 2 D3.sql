@@ -1,4 +1,4 @@
-select * from Course
+ï»¿select * from Course
 select * from Department
 select * from Instructor
 select * from Ins_Course
@@ -32,7 +32,7 @@ select * from vEncrypted
 
 
 
---3)Create a view that will display Instructor Name, Department Name for the ‘SD’ or ‘Java’ Department 
+--3)Create a view that will display Instructor Name, Department Name for the â€˜SDâ€™ or â€˜Javaâ€™ Department 
 
 create view Instructors_JavaAndSDDD 
 as
@@ -42,10 +42,10 @@ from Instructor i inner join Department d on i.Dept_Id = d.Dept_Id where d.Dept_
 select Ins_Name , Dept_Name  from Instructors_JavaAndSDDD
 
 
---4)Create a view “V1” that displays student data for student who lives in Alex or Cairo. 
+--4)Create a view â€œV1â€ that displays student data for student who lives in Alex or Cairo. 
 --Note: Prevent the users to run the following query 
---Update V1 set st_address=’tanta’
---Where st_address=’alex’;
+--Update V1 set st_address=â€™tantaâ€™
+--Where st_address=â€™alexâ€™;
 
 use ITI
 create  view v1 as
@@ -61,12 +61,12 @@ as
 begin 
 if exists (select * from inserted where St_Address ='Alex')
 begin 
-print 'you are not allow update address'
+print 'you are not allow to update address'
 end 
 end 
 
 
---5.Create a view that will display the project name and the number of employees work on it. “Use Company DB”
+--5.Create a view that will display the project name and the number of employees work on it. â€œUse Company DBâ€
 
 use Company_SD
 
@@ -80,9 +80,9 @@ select * from countEmployee
 
 --6.	Create the following schema and transfer the following tables to it (Self Search )
 --a.	Company Schema
---Add ? Department table and Project table
+--Add ïƒ¨ Department table and Project table
 --b.	Human Resource Schema
---            Add ?Employee table
+--            Add ïƒ¨Employee table
 create schema company;
 create table company.Department (
     D_id int primary key,
